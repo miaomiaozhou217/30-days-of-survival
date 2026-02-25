@@ -4,12 +4,12 @@
     "startCapital": 1011,
     "target": 200,
     "currency": "AUD/USD mixed",
-    "lastUpdated": "2026-02-25T12:20:00+10:30"
+    "lastUpdated": "2026-02-25T16:15:00+10:30"
   },
   "bankroll": [
     { "day": 0, "date": "2026-02-24", "value": 1011 },
     { "day": 1, "date": "2026-02-24", "value": 1024.50 },
-    { "day": 2, "date": "2026-02-25", "value": 1024.50 }
+    { "day": 2, "date": "2026-02-25", "value": 1065.42 }
   ],
   "bets": [
     {
@@ -17,25 +17,32 @@
       "bet": "OVER 232.5", "stake": 15, "stakeCurrency": "AUD",
       "deviation": 1.0, "confidence": 8.6,
       "result": "WIN", "pnl": 13.50,
+      "actual": "SAC 130 - MEM 107 (237)",
       "audit": "Edge existed. Rules followed. Model predicted 233.5 vs line 232.5."
     },
     {
       "day": 2, "date": "2026-02-25", "game": "DAL @ BKN",
       "bet": "OVER 226.5", "stake": 15, "stakeCurrency": "AUD",
       "deviation": 7.6, "confidence": 8.9,
-      "result": "PENDING", "pnl": null
+      "result": "WIN", "pnl": 13.64,
+      "actual": "DAL 123 - BKN 114 (237)",
+      "audit": "Cleared by 10.5 points. Strong over."
     },
     {
       "day": 2, "date": "2026-02-25", "game": "OKC @ TOR",
       "bet": "OVER 216.5", "stake": 15, "stakeCurrency": "AUD",
       "deviation": 9.9, "confidence": 5.3,
-      "result": "PENDING", "pnl": null
+      "result": "WIN", "pnl": 13.64,
+      "actual": "OKC 116 - TOR 107 (223)",
+      "audit": "Cleared by 6.5 points. Comfortable win."
     },
     {
       "day": 2, "date": "2026-02-25", "game": "MIN @ POR",
-      "bet": "OVER 235.5", "stake": 15, "stakeCurrency": "AUD",
+      "bet": "OVER 234.5", "stake": 15, "stakeCurrency": "AUD",
       "deviation": 17.7, "confidence": 17.8,
-      "result": "PENDING", "pnl": null
+      "result": "WIN", "pnl": 13.64,
+      "actual": "MIN 124 - POR 121 (245)",
+      "audit": "Final 245, cleared by 10.5. ESPN confirms 124-121."
     },
     {
       "day": 2, "date": "2026-02-25", "game": "BOS @ PHX",
