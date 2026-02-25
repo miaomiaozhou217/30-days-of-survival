@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "startDate": "2026-02-24",
+    "startCapital": 1011,
+    "target": 200,
+    "currency": "AUD/USD mixed",
+    "lastUpdated": "2026-02-25T12:20:00+10:30"
+  },
+  "bankroll": [
+    { "day": 0, "date": "2026-02-24", "value": 1011 },
+    { "day": 1, "date": "2026-02-24", "value": 1024.50 },
+    { "day": 2, "date": "2026-02-25", "value": 1024.50 }
+  ],
+  "bets": [
+    {
+      "day": 1, "date": "2026-02-24", "game": "SAC @ MEM",
+      "bet": "OVER 232.5", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 1.0, "confidence": 8.6,
+      "result": "WIN", "pnl": 13.50,
+      "audit": "Edge existed. Rules followed. Model predicted 233.5 vs line 232.5."
+    },
+    {
+      "day": 2, "date": "2026-02-25", "game": "DAL @ BKN",
+      "bet": "OVER 226.5", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 7.6, "confidence": 8.9,
+      "result": "PENDING", "pnl": null
+    },
+    {
+      "day": 2, "date": "2026-02-25", "game": "OKC @ TOR",
+      "bet": "OVER 216.5", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 9.9, "confidence": 5.3,
+      "result": "PENDING", "pnl": null
+    },
+    {
+      "day": 2, "date": "2026-02-25", "game": "MIN @ POR",
+      "bet": "OVER 235.5", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 17.7, "confidence": 17.8,
+      "result": "PENDING", "pnl": null
+    },
+    {
+      "day": 2, "date": "2026-02-25", "game": "BOS @ PHX",
+      "bet": "OVER 206.5", "stake": 10, "stakeCurrency": "AUD",
+      "deviation": 17.0, "confidence": 4.0,
+      "result": "CASHOUT", "pnl": 0,
+      "audit": "Tatum OUT (Achilles, season-ending), Booker OUT. OVER thesis collapsed. Cashed out."
+    }
+  ],
+  "books": [
+    { "day": 1, "title": "围城 (Fortress Besieged)", "author": "钱钟书", "rating": "⭐⭐⭐⭐⭐", "weapon": "Marriage is a fortress — those outside want in, those inside want out. Applied: Don't chase trades you're not in." },
+    { "day": 2, "title": "孙子兵法 (The Art of War)", "author": "孙子", "rating": "9.5/10", "weapon": "先为不可胜 — Win first, then fight. Applied: Only bet when edge exists. Passing IS a move." }
+  ],
+  "rules": [
+    "Only bet when model deviation ≥ 6 points",
+    "Max 5% bankroll per bet",
+    "Max 4 bets per day",
+    "No tilt re-bets: 30 min cooldown after loss",
+    "Cash out if key injury breaks thesis",
+    "Post full audit for every bet",
+    "One book per day → one rule → test it"
+  ]
+}
