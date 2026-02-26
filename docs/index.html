@@ -298,8 +298,16 @@
       <span>16-cell Wilson CI filter from 113-game backtest. Only 2 cells passed. <strong>Retired after 2-day live validation: V3 filtered out 3 winners and its only unique trigger lost.</strong> Classic overfit to sparse data.</span>
     </div>
     <div class="ver">
-      <span class="ver-tag active">V4 ✅</span>
-      <span>Simple: OVER dev≥6 → $15 | UNDER dev≥10 → $15 | line&lt;212 blocked | $15 flat | max 5/day. Co-designed with GPT-5.2 across 4 rounds of debate.</span>
+      <span class="ver-tag superseded">V4</span>
+      <span>OVER dev≥6 → $15 | UNDER dev≥10 → $15 | line&lt;212 blocked. Never went live — superseded by backtest comparison.</span>
+    </div>
+    <div class="ver">
+      <span class="ver-tag superseded">V0_strict</span>
+      <span>confidence &gt; 5% + line≥212 + tiered $15/$25. Won backtest but used different prediction pipeline than live trading. Never went live.</span>
+    </div>
+    <div class="ver">
+      <span class="ver-tag active">V1_simple ✅</span>
+      <span>Back to what actually won: dev≥6 → $15 | dev≥15 → $25 | line&lt;212 blocked | max 5/day $80. The rule that went 6W-0L. Simple &gt; Complex.</span>
     </div>
   </div>
 </div>
@@ -326,20 +334,30 @@
   </div>
 </div>
 
-<!-- Rules V4 -->
+<!-- Rules V1_simple -->
 <div class="rules">
-  <div class="section-title">Trading Rules (V4 — Active)</div>
+  <div class="section-title">Trading Rules (V1_simple — Active)</div>
   <ul>
-    <li><strong>OVER:</strong> Bet when model deviation ≥ 6 points from market line ($15 flat)</li>
-    <li><strong>UNDER:</strong> Bet only when deviation ≥ 10 points ($15 flat)</li>
-    <li>No bet when market line &lt; 212 (low-total trap protection)</li>
+    <li><strong>Core:</strong> abs(prediction - line) ≥ 6 → BET $15 | ≥ 15 → BET $25</li>
+    <li>No bet when market line &lt; 212 (low-total trap, learned from BOS@PHX)</li>
+    <li>No direction bias — same rule for OVER and UNDER</li>
     <li>Three-confirmation flow: night before → morning → 20min pre-game</li>
-    <li>Max 5 bets / $75 per day</li>
+    <li>Max 5 bets / $80 per day</li>
     <li>3 consecutive losses → stop for the day</li>
     <li>Total drawdown &gt; $100 → pause entire system</li>
     <li>Cash out if key injury breaks thesis mid-game</li>
-    <li>Simple &gt; Complex — V3 overfit proved this on Day 3</li>
+    <li>Simple &gt; Complex — tried V3, V4, V0_strict. The simplest rule won 6-0.</li>
     <li>One book per day → extract one rule → test it</li>
+  </ul>
+</div>
+
+<!-- Products -->
+<div class="rules">
+  <div class="section-title">🛒 Products</div>
+  <ul>
+    <li><strong><a href="https://webzter1.gumroad.com/l/byrny" style="color: var(--accent);">NBA Betting Tracker — AI V1_simple System</a></strong> — A$15 on Gumroad</li>
+    <li>5 Google Sheets: Bet Tracker, Rules, ROI Dashboard, Bankroll, Pre-Game Checklist</li>
+    <li>The exact toolkit used in this survival challenge</li>
   </ul>
 </div>
 
