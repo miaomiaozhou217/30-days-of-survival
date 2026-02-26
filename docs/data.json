@@ -4,7 +4,7 @@
     "startCapital": 1011,
     "target": 200,
     "currency": "AUD/USD mixed",
-    "lastUpdated": "2026-02-26T14:00:00+10:30"
+    "lastUpdated": "2026-02-26T14:37:00+10:30"
   },
   "bankroll": [
     { "day": 0, "date": "2026-02-24", "value": 1011 },
@@ -66,7 +66,7 @@
       "deviation": 8.1, "confidence": 7.3,
       "result": "WIN", "pnl": 13.50,
       "actual": "GS 133 - MEM 112 (245)",
-      "audit": "Warriors dominated. Total 245 blew past 225 line. Model predicted 233.1."
+      "audit": "Warriors dominated. Total 245 blew past 225 line."
     },
     {
       "day": 3, "date": "2026-02-26", "game": "CLE @ MIL",
@@ -74,21 +74,29 @@
       "deviation": 12.7, "confidence": 9.1,
       "result": "CANCELLED", "pnl": -2.00,
       "actual": "CLE 116 - MIL 118 (234)",
-      "audit": "Cancelled after Mitchell, Mobley, Giannis, Harden all OUT. Adjusted model dropped deviation below 6pt threshold. OVER would have hit. Lesson: missing stars ≠ lower total. Backups = worse defense = more points."
+      "audit": "Mitchell, Mobley, Giannis, Harden all OUT/questionable. Deviation dropped below threshold. Cancelled at -$2 fee. OVER would have hit — lesson: missing stars ≠ lower total."
     }
   ],
   "books": [
     { "day": 1, "title": "围城 (Fortress Besieged)", "author": "钱钟书", "rating": "⭐⭐⭐⭐⭐", "weapon": "Marriage is a fortress — those outside want in, those inside want out. Applied: Don't chase trades you're not in." },
     { "day": 2, "title": "孙子兵法 (The Art of War)", "author": "孙子", "rating": "9.5/10", "weapon": "先为不可胜 — Win first, then fight. Applied: Only bet when edge exists. Passing IS a move." },
-    { "day": 3, "title": "Thinking in Bets", "author": "Annie Duke", "rating": "9/10", "weapon": "Process over outcome. Resulting is the enemy. Good decisions can have bad outcomes — and that's OK." }
+    { "day": 3, "title": "Thinking in Bets", "author": "Annie Duke", "rating": "9/10", "weapon": "Process over outcome. Resulting is the enemy. Don't judge decisions by outcomes — judge by the quality of thinking that went into them." }
+  ],
+  "strategy_evolution": [
+    { "version": "V2", "date": "2026-02-26", "rule": "dev≥6 threshold + three-confirmation flow + tiered sizing ($15/$25)", "status": "superseded" },
+    { "version": "V3", "date": "2026-02-26", "rule": "16-cell Wilson CI filter: only 2 cells passed (10-15pt OVER <228, 15+ UNDER ≥228)", "status": "retired — overfit to 113-game backtest noise" },
+    { "version": "V4", "date": "2026-02-26", "rule": "Simple: dev≥6 OVER $15 | dev≥10 UNDER $15 | line<212 blocked | $15 flat", "status": "active" }
   ],
   "rules": [
-    "Only bet when model deviation ≥ 6 points",
-    "Max 5% bankroll per bet",
-    "Max 4 bets per day",
-    "No tilt re-bets: 30 min cooldown after loss",
-    "Cash out if key injury breaks thesis",
-    "Post full audit for every bet",
-    "One book per day → one rule → test it"
+    "OVER: bet when model deviation ≥ 6 points ($15 flat)",
+    "UNDER: bet only when deviation ≥ 10 points ($15 flat)",
+    "No bet when market line < 212 (low-total protection)",
+    "Max 5 bets / $75 per day",
+    "Three-confirmation flow: night before → morning → 20min pre-game",
+    "3 consecutive losses → stop for the day",
+    "Total drawdown > $100 → pause and reassess",
+    "Post full audit for every bet — win or lose",
+    "One book per day → extract one rule → test it",
+    "Simple > Complex — V3 overfit proved this"
   ]
 }
