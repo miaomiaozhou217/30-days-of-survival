@@ -4,13 +4,16 @@
     "startCapital": 1011,
     "target": 200,
     "currency": "AUD/USD mixed",
-    "lastUpdated": "2026-02-26T14:37:00+10:30"
+    "lastUpdated": "2026-03-01T15:49:00+10:30"
   },
   "bankroll": [
     { "day": 0, "date": "2026-02-24", "value": 1011 },
     { "day": 1, "date": "2026-02-24", "value": 1024.50 },
     { "day": 2, "date": "2026-02-25", "value": 1065.42 },
-    { "day": 3, "date": "2026-02-26", "value": 1099.42 }
+    { "day": 3, "date": "2026-02-26", "value": 1099.42 },
+    { "day": 4, "date": "2026-02-27", "value": 1074.42 },
+    { "day": 5, "date": "2026-02-28", "value": 1076.42 },
+    { "day": 6, "date": "2026-03-01", "value": 1083.92 }
   ],
   "bets": [
     {
@@ -43,14 +46,14 @@
       "deviation": 17.7, "confidence": 17.8,
       "result": "WIN", "pnl": 13.64,
       "actual": "MIN 124 - POR 121 (245)",
-      "audit": "Final 245, cleared by 10.5. ESPN confirms 124-121."
+      "audit": "Final 245, cleared by 10.5."
     },
     {
       "day": 2, "date": "2026-02-25", "game": "BOS @ PHX",
       "bet": "OVER 206.5", "stake": 10, "stakeCurrency": "AUD",
       "deviation": 17.0, "confidence": 4.0,
       "result": "CASHOUT", "pnl": 0,
-      "audit": "Tatum OUT (Achilles, season-ending), Booker OUT. OVER thesis collapsed. Cashed out."
+      "audit": "Tatum OUT (Achilles), Booker OUT. Cashed out."
     },
     {
       "day": 3, "date": "2026-02-26", "game": "SA @ TOR",
@@ -58,7 +61,7 @@
       "deviation": -13.6, "confidence": 5.7,
       "result": "WIN", "pnl": 22.50,
       "actual": "SA 110 - TOR 107 (217)",
-      "audit": "Model predicted 216.8, actual 217. Off by 0.2 points. Near-perfect prediction."
+      "audit": "Model predicted 216.8, actual 217. Off by 0.2 points."
     },
     {
       "day": 3, "date": "2026-02-26", "game": "GS @ MEM",
@@ -74,29 +77,95 @@
       "deviation": 12.7, "confidence": 9.1,
       "result": "CANCELLED", "pnl": -2.00,
       "actual": "CLE 116 - MIL 118 (234)",
-      "audit": "Mitchell, Mobley, Giannis, Harden all OUT/questionable. Deviation dropped below threshold. Cancelled at -$2 fee. OVER would have hit — lesson: missing stars ≠ lower total."
+      "audit": "Key players OUT. Cancelled at -$2 fee."
+    },
+    {
+      "day": 4, "date": "2026-02-27", "game": "NO @ UTAH",
+      "bet": "UNDER 233.5", "stake": 25, "stakeCurrency": "AUD",
+      "deviation": -10.2, "confidence": 7.1,
+      "result": "LOSS", "pnl": -25.00,
+      "actual": "NO 119 - UTAH 126 (245)",
+      "audit": "Total 245, blew past line. UNDER thesis failed."
+    },
+    {
+      "day": 4, "date": "2026-02-27", "game": "MIA @ PHI",
+      "bet": "UNDER 218.5", "stake": 25, "stakeCurrency": "AUD",
+      "deviation": -8.5, "confidence": 6.2,
+      "result": "LOSS", "pnl": -25.00,
+      "actual": "MIA 112 - PHI 119 (231)",
+      "audit": "Total 231, UNDER failed. Two UNDER losses in a row."
+    },
+    {
+      "day": 4, "date": "2026-02-27", "game": "SA @ BKN",
+      "bet": "OVER 218.5", "stake": 25, "stakeCurrency": "AUD",
+      "deviation": 11.3, "confidence": 8.4,
+      "result": "WIN", "pnl": 25.00,
+      "actual": "SA 122 - BKN 108 (230)",
+      "audit": "OVER hit comfortably. Saved the day."
+    },
+    {
+      "day": 5, "date": "2026-02-28", "game": "BKN @ BOS",
+      "bet": "OVER 224.5", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 7.2, "confidence": 6.8,
+      "result": "WIN", "pnl": 13.50,
+      "actual": "BKN 108 - BOS 125 (233)",
+      "audit": "Cleared comfortably."
+    },
+    {
+      "day": 5, "date": "2026-02-28", "game": "CLE @ DET",
+      "bet": "OVER 218.5", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 6.5, "confidence": 5.9,
+      "result": "WIN", "pnl": 13.50,
+      "actual": "CLE 114 - DET 108 (222)",
+      "audit": "Just over the line but a win."
+    },
+    {
+      "day": 5, "date": "2026-02-28", "game": "MEM @ DAL",
+      "bet": "OVER 232.5", "stake": 25, "stakeCurrency": "AUD",
+      "deviation": 15.1, "confidence": 9.3,
+      "result": "LOSS", "pnl": -25.00,
+      "actual": "MEM 98 - DAL 112 (210)",
+      "audit": "Total only 210. Line moved, should have adjusted stake to $15."
+    },
+    {
+      "day": 6, "date": "2026-03-01", "game": "NO @ UTAH",
+      "bet": "UNDER 245.4", "stake": 25, "stakeCurrency": "AUD",
+      "deviation": -12.8, "confidence": 7.5,
+      "result": "WIN", "pnl": 22.50,
+      "actual": "NO 115 - UTAH 105 (220)",
+      "audit": "Total 220, well under 245.4. Strong UNDER hit."
+    },
+    {
+      "day": 6, "date": "2026-03-01", "game": "POR @ CHA",
+      "bet": "OVER 228.6", "stake": 15, "stakeCurrency": "AUD",
+      "deviation": 8.3, "confidence": 6.1,
+      "result": "LOSS", "pnl": -15.00,
+      "actual": "POR 93 - CHA 109 (202)",
+      "audit": "Total only 202. Hornets defense locked down Portland."
     }
   ],
   "books": [
-    { "day": 1, "title": "围城 (Fortress Besieged)", "author": "钱钟书", "rating": "⭐⭐⭐⭐⭐", "weapon": "Marriage is a fortress — those outside want in, those inside want out. Applied: Don't chase trades you're not in." },
-    { "day": 2, "title": "孙子兵法 (The Art of War)", "author": "孙子", "rating": "9.5/10", "weapon": "先为不可胜 — Win first, then fight. Applied: Only bet when edge exists. Passing IS a move." },
-    { "day": 3, "title": "Thinking in Bets", "author": "Annie Duke", "rating": "9/10", "weapon": "Process over outcome. Resulting is the enemy. Don't judge decisions by outcomes — judge by the quality of thinking that went into them." }
+    { "day": 1, "title": "围城 (Fortress Besieged)", "author": "钱钟书", "rating": "⭐⭐⭐⭐⭐", "weapon": "Marriage is a fortress — those outside want in, those inside want out." },
+    { "day": 2, "title": "孙子兵法 (The Art of War)", "author": "孙子", "rating": "9.5/10", "weapon": "先为不可胜 — Win first, then fight." },
+    { "day": 3, "title": "Thinking in Bets", "author": "Annie Duke", "rating": "9/10", "weapon": "Process over outcome. Resulting is the enemy." },
+    { "day": 4, "title": "Antifragile", "author": "Nassim Taleb", "rating": "10/10", "weapon": "Antifragility — gain from disorder. Barbell strategy." },
+    { "day": 5, "title": "Currency Wars", "author": "James Rickards", "rating": "reading", "weapon": "Sandpile theory — complex systems collapse from small triggers." }
   ],
   "strategy_evolution": [
-    { "version": "V2", "date": "2026-02-26", "rule": "dev≥6 threshold + three-confirmation flow + tiered sizing ($15/$25)", "status": "superseded" },
-    { "version": "V3", "date": "2026-02-26", "rule": "16-cell Wilson CI filter: only 2 cells passed (10-15pt OVER <228, 15+ UNDER ≥228)", "status": "retired — overfit to 113-game backtest noise" },
-    { "version": "V4", "date": "2026-02-26", "rule": "Simple: dev≥6 OVER $15 | dev≥10 UNDER $15 | line<212 blocked | $15 flat", "status": "active" }
+    { "version": "V1_simple", "date": "2026-02-24", "rule": "dev≥6 & line≥212 → $15; dev≥15 → $25; max 5/$80 daily", "status": "active" },
+    { "version": "V3", "date": "2026-02-26", "rule": "Wilson CI 16-cell filter", "status": "retired — overfit" },
+    { "version": "V5", "date": "2026-02-28", "rule": "SVR-Linear model", "status": "retired — data leakage concerns" },
+    { "version": "V1_simple (restored)", "date": "2026-02-28", "rule": "Back to XGBoost V3 + V1_simple rules. Don't fix what's working.", "status": "active" }
   ],
   "rules": [
-    "OVER: bet when model deviation ≥ 6 points ($15 flat)",
-    "UNDER: bet only when deviation ≥ 10 points ($15 flat)",
-    "No bet when market line < 212 (low-total protection)",
-    "Max 5 bets / $75 per day",
-    "Three-confirmation flow: night before → morning → 20min pre-game",
+    "XGBoost V3 model — the 6W-0L engine, do NOT change",
+    "dev≥6 & line≥212 → $15 bet",
+    "dev≥15 → $25 bet",
+    "Max 5 bets / $80 per day",
+    "Three-confirmation flow: night → morning → 20min pre-game",
     "3 consecutive losses → stop for the day",
     "Total drawdown > $100 → pause and reassess",
     "Post full audit for every bet — win or lose",
-    "One book per day → extract one rule → test it",
-    "Simple > Complex — V3 overfit proved this"
+    "Simple > Complex — proven by V3/V5 failures"
   ]
 }
